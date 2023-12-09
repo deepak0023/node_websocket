@@ -3,11 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>WebScockets</title>
-        <link href="/styles.css" rel="stylesheet" />
+        <link href="/style.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
-        <h1>Test UI</h1>
-        <script src="/chat.js"></script>
+        <div id="mario-chat">
+            <h2>Test Chat Box</h2>
+            <div id="chat-window">
+                <div id="output"></div>
+            </div>
+            <input id="handle" type="text" placeholder="Username" />
+            <input id="message" type="text" placeholder="Message" />
+            <button id="send">Send</button>
+        </div>
     </body>
+    <script src="/chat.js"></script>
 </html>
