@@ -18,6 +18,7 @@ btn.addEventListener('click', function(){
 
 // Listen for events from the server
 socket.on('chat', function(data){
+    feedback.innerHTML = '';      // once the send button is pressed the typing status must disappear
     output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
 });
 
