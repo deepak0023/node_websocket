@@ -20,4 +20,9 @@ io.on('connection', (socket) => {
         // console.log(data);
         io.sockets.emit('chat', data);
     });
+
+    // Handle typing event (broadcast event makes sure that the data is emited to all the members except the present user who is typing)
+    socket.on('typing', function(data){
+        socket.broadcast.emit('typing', data);
+    });
 });
