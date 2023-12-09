@@ -14,4 +14,10 @@ app.use(express.static('public'));
 var io = socket(server);
 io.on('connection', (socket) => {
     console.log('made socket connection', socket.id);
+
+    // Get Message from the client and emit to all the clients connected to it on chat channel
+    socket.on('chat', function(data){
+        // console.log(data);
+        io.sockets.emit('chat', data);
+    });
 });
